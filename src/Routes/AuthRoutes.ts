@@ -1,4 +1,6 @@
-const AUTH_ROUTES: string[] = [
+import { CustomRouter } from './RootRoutes';
+
+const AUTH_ROUTES: Array<CustomRouter> = [
   // {
   //   path: '/forgot-password',
   //   component: ForgotPassword,
