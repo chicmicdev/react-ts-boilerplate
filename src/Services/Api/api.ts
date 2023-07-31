@@ -1,11 +1,18 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+/* eslint-disable import/no-cycle */
+import {
+  createApi,
+  fetchBaseQuery,
+  BaseQueryFn,
+  BaseQueryApi,
+} from '@reduxjs/toolkit/query/react';
+import type { RootState } from '../../Store';
 import { API_BASE_URL } from './Constants';
+import { ResponseOptions } from './api.d';
 
-const baseQuery = fetchBaseQuery({
+const baseQuery: BaseQueryFn = fetchBaseQuery({
   baseUrl: API_BASE_URL,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  prepareHeaders: async (headers, { getState }) => {
-    const { token } = getState().common;
+  prepareHeaders: async (headers: Headers, { getState }) => {
+    const { token } = (getState() as RootState).common;
     if (token) {
       headers.append('authorization', `${token}`);
     }
@@ -13,16 +20,22 @@ const baseQuery = fetchBaseQuery({
   },
 });
 
-const baseQueryWithInterceptor = async (args, api, extraOptions) => {
+const baseQueryWithInterceptor = async (
+  args: unknown,
+  api: BaseQueryApi,
+  extraOptions: object
+) => {
   const result = await baseQuery(args, api, extraOptions);
-  if (result.error && result.error.status === 401) {
+  if (
+    (result as ResponseOptions).error &&
+    (result as ResponseOptions).error.status === 401
+  ) {
     // here you can deal with 401 error
   }
   return result;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const api: any = createApi({
+const api = createApi({
   baseQuery: baseQueryWithInterceptor,
   endpoints: () => ({}),
 });

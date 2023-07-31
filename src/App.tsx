@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/lib/integration/react';
+import { PersistGate } from 'redux-persist/integration/react';
 import reactLogo from './assets/react.svg';
 import { store, persistor } from './Store';
 import Dashboard from './Views/Dashboard';
