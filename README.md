@@ -67,7 +67,7 @@ VITE_API_URL=https://api.production.com
 VITE_API_URL=https://api.development.com
 ```
 
-### 3. Loading Environment Variables
+### 3. Loading Environment Variables (Optional)
 
 To load the appropriate environment variables in your Vite.js project, you'll need to use the `@rollup/plugin-replace` plugin. Vite.js uses Rollup as its underlying build tool, and this plugin allows you to replace strings in your code during the build process.
 
