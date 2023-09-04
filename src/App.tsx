@@ -10,6 +10,9 @@ const baseName = import.meta.env.VITE_BASE_NAME;
 
 function App() {
   // const [count, setCount] = useState<number>(0);
+  // const isOnline = useOnlineStatus();
+  // console.log('Status: ', isOnline ? '✅ Online' : '❌ Disconnected');
+
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
