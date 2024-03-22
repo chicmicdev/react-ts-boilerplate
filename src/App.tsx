@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from './Store';
 import RootRouter from './Routes/RootRouter';
+import { NotificationWrapper } from './Components/Layouts/Public/NotificationWrapper';
 import './App.css';
 
 const baseName = import.meta.env.VITE_BASE_NAME;
@@ -14,9 +15,11 @@ function App() {
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <HelmetProvider>
-          <BrowserRouter basename={baseName}>
-            <RootRouter />
-          </BrowserRouter>
+          <NotificationWrapper>
+            <BrowserRouter basename={baseName}>
+              <RootRouter />
+            </BrowserRouter>
+          </NotificationWrapper>
         </HelmetProvider>
       </PersistGate>
     </Provider>
