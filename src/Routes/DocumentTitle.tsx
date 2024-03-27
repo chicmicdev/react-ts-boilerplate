@@ -1,7 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import { Path, pathToRegexp } from 'path-to-regexp';
-
 import AUTH_ROUTES from './AuthRoutes';
 import { PRIVATE_ROUTES } from './PrivateRoutes';
 import { PUBLIC_ROUTES } from './PublicRoutes';
