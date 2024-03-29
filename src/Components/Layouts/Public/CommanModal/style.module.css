@@ -1,0 +1,14 @@
+.commonPopupHeader {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ccc;
+}
+
+.iconButton {
+    padding: 0px;
+    width: 20px;
+    height: 20px;
+    color: #f00;
+    background: transparent;
+    font-size: 1.2rem;
+}

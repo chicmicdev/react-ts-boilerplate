@@ -38,5 +38,6 @@ module.exports = {
     ],
     'no-restricted-exports': ['off'],
     'import/no-extraneous-dependencies': ['off'],
+    'react/require-default-props': 'off',
   },
 };
