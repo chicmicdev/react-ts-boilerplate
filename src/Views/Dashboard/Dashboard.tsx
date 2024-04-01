@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useDemoApiQuery } from '../../Services/Api/module/demoApi';
+import SignalCounter from '../../Components/Layouts/Public/SignalCounter';
 // import useNotifications from '../../Hooks/useNotifications';
 
 export default function Dashboard() {
@@ -14,5 +15,12 @@ export default function Dashboard() {
   //     }, 3000);
   //   }
   // }, [notifySuccess]);
-  return <div>Dashboard{t('hello_world')}</div>;
+  return (
+    <div>
+      Dashboard{t('hello_world')}
+      <div>
+        <SignalCounter />
+      </div>
+    </div>
+  );
 }
