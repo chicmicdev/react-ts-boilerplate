@@ -1,4 +1,4 @@
-import IMAGES from '../../../../Shared/Images';
+import IMAGES from '../../../Shared/Images';
 
 function ErrorFallback() {
   return (

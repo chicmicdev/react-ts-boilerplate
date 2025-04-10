@@ -3,7 +3,7 @@ import { Navigate } from 'react-router-dom';
 import { ROUTES_CONFIG, WILDCARD_ROUTES } from '../Shared/Constants';
 import { CustomRouter } from './RootRoutes';
 
-const Dashboard = lazy(() => import('../Views/Dashboard/Dashboard'));
+const Dashboard = lazy(() => import('../Pages/Dashboard/Dashboard'));
 
 // eslint-disable-next-line import/prefer-default-export
 export const PUBLIC_ROUTES: Array<CustomRouter> = [
