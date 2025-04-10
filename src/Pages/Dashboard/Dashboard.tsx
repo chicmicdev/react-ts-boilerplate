@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useDemoApiQuery } from '../../Services/Api/module/demoApi';
-import SignalCounter from '../../Components/Layouts/Public/SignalCounter';
+import SignalCounter from '../../Layouts/Public/SignalCounter';
 // import useNotifications from '../../Hooks/useNotifications';
 
 export default function Dashboard() {

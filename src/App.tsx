@@ -6,10 +6,10 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { Suspense } from 'react';
 import { store, persistor } from './Store';
 import RootRouter from './Routes/RootRouter';
-import { NotificationWrapper } from './Components/Layouts/Public/NotificationWrapper';
+import { NotificationWrapper } from './Layouts/Public/NotificationWrapper';
 import './App.css';
-import ErrorFallback from './Components/Layouts/Public/ErrorFallback';
-import './i18n/config';
+import ErrorFallback from './Layouts/Public/ErrorFallback';
+import './I18n/config';
 
 const baseName = import.meta.env.VITE_BASE_NAME;
 

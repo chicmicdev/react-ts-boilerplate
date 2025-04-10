@@ -2,7 +2,7 @@ import { useSnackbar } from 'notistack';
 import {
   firstLetterUpperCase,
   handleCloseNotification,
-} from '../Helpers/functions';
+} from '../Shared/functions';
 
 export default function useNotifications() {
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();

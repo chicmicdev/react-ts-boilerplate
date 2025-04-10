@@ -1,4 +1,4 @@
-import NotificationCloseButton from '../Components/Layouts/Public/NotificationCloseButton';
+import NotificationCloseButton from '../Layouts/Public/NotificationCloseButton';
 import { closeSnackbarHandler } from '../Models';
 
 // eslint-disable-next-line import/prefer-default-export

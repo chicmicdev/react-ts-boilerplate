@@ -1,4 +1,4 @@
-import { closeSnackbarHandler } from '../../../../Models';
+import { closeSnackbarHandler } from '../../../Models';
 
 interface NotificationWrapperProps {
   closeSnackbar: closeSnackbarHandler;

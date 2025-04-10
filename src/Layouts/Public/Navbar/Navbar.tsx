@@ -1,7 +1,7 @@
 import './navbar.scss';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { ROUTES } from '../../../../Shared/Constants';
+import { ROUTES } from '../../../Shared/Constants';
 import LocaleSwitcher from '../LocalSwitcher';
 import CommonModal from '../CommanModal';
 
