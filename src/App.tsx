@@ -6,9 +6,8 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { Suspense } from 'react';
 import { store, persistor } from './Store';
 import RootRouter from './Routes/RootRouter';
-import { NotificationWrapper } from './Layouts/Public/NotificationWrapper';
 import './App.css';
-import ErrorFallback from './Layouts/Public/ErrorFallback';
+import ErrorFallback from './Components/CustomComponents/ErrorFallback';
 import './I18n/config';
 
 const baseName = import.meta.env.VITE_BASE_NAME;
@@ -21,11 +20,9 @@ function App() {
         <Provider store={store}>
           <PersistGate persistor={persistor}>
             <HelmetProvider>
-              <NotificationWrapper>
-                <BrowserRouter basename={baseName}>
-                  <RootRouter />
-                </BrowserRouter>
-              </NotificationWrapper>
+              <BrowserRouter basename={baseName}>
+                <RootRouter />
+              </BrowserRouter>
             </HelmetProvider>
           </PersistGate>
         </Provider>

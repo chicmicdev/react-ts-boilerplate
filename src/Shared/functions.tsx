@@ -1,6 +1,3 @@
-import NotificationCloseButton from '../Layouts/Public/NotificationCloseButton';
-import { closeSnackbarHandler } from '../Models';
-
 // eslint-disable-next-line import/prefer-default-export
 export const firstLetterUpperCase = (message: string) => {
   if (message && message.length > 0) {
@@ -11,8 +8,3 @@ export const firstLetterUpperCase = (message: string) => {
   }
   return '';
 };
-
-export const handleCloseNotification = (
-  closeSnackbar: closeSnackbarHandler,
-  id: string
-) => <NotificationCloseButton closeSnackbar={closeSnackbar} id={id} />;
