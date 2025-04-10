@@ -15,7 +15,7 @@ function DocumentTitle({ isAuthenticated = false }) {
   const matchedRoute: CustomRouter | undefined = ROUTES.find(
     (route: CustomRouter) =>
       route.path !== '*' &&
-      pathToRegexp(route.path as Path).test(location.pathname)
+      pathToRegexp(route.path as Path).regexp.test(location.pathname)
   );
 
   const title = matchedRoute ? matchedRoute.title : '';

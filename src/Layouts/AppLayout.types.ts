@@ -1,4 +1,6 @@
+import { ReactNode } from 'react';
+
 export interface AppLayoutProps {
   isAuthenticated?: boolean;
-  children: string | JSX.Element | JSX.Element[] | null;
+  children: string | ReactNode | ReactNode[] | null;
 }

@@ -21,7 +21,7 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
-    ".eslintrc.cjs",
+    ".eslint.config.js",
     "src"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
