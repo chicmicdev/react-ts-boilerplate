@@ -41,7 +41,7 @@ Follow these steps to create and use environment variables in your Vite.js proje
 ### 1. Create the Files
 
 Start by creating two separate `.env` files at the root of your Vite.js project directory: `.env.production` and `.env.development`.
-
+Check .env.sample for env file skelton.
 ```plaintext
 project-root/
   ├── .env.production
@@ -74,7 +74,7 @@ To load the appropriate environment variables in your Vite.js project, you'll ne
 1. Install the `@rollup/plugin-replace` package:
 
 ```bash
-npm install @rollup/plugin-replace --save-dev
+yarn install @rollup/plugin-replace --save-dev
 ```
 
 2. Configure the plugin in your Vite `vite.config.js` file:
@@ -92,7 +92,7 @@ export default defineConfig({
 });
 ```
 
-### 4. Using Environment Variables
+### 4. Using Environment Variables in Code
 
 You can access environment variables in your Vite.js project just like regular variables:
 
@@ -107,13 +107,20 @@ To run your project with the desired environment variables, use the following co
 For development:
 
 ```bash
-npm run start:dev
+yarn run start:dev
 ```
 
 For production:
 
 ```bash
-npm run start:production
+yarn run start:production
+```
+
+For production (Build & Preview):
+
+```bash
+yarn run build
+yarn run preview
 ```
 
 ## Conclusion

@@ -6,7 +6,7 @@ import Checker from 'vite-plugin-checker';
 
 
 export default ({ mode }) => {
-  process.env = {...process.env, ...loadEnv(mode, process.cwd())};
+  // process.env = {...process.env, ...loadEnv(mode, process.cwd())};
   return defineConfig({
     plugins: [react(),
       Checker({
