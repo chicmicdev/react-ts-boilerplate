@@ -5,6 +5,7 @@ import { authenticatedRoutes, guestRoutes } from './config';
 import AppLayout from '../Layouts/AppLayout';
 import type { RootState } from '../Store';
 import useOnlineStatus from '../Hooks/useOnlineStatus';
+import { ThemeProvider } from '@/Components/ui/theme-provider';
 
 function RootRouter() {
   const guest = useRoutes(guestRoutes);
@@ -13,13 +14,13 @@ function RootRouter() {
   const isOnline = useOnlineStatus();
   const isAuthenticated = !!token;
   return (
-    <>
+    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       {isOnline ? null : 'user is offline'}
       <DocumentTitle isAuthenticated={isAuthenticated} />
       <AppLayout isAuthenticated={isAuthenticated}>
         {token ? authenticated : guest}
       </AppLayout>
-    </>
+    </ThemeProvider>
   );
 }
 
