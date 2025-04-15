@@ -4,14 +4,17 @@ import DocumentTitle from './DocumentTitle';
 import { authenticatedRoutes, guestRoutes } from './config';
 import AppLayout from '../Layouts/AppLayout';
 import type { RootState } from '../Store';
+import useOnlineStatus from '../Hooks/useOnlineStatus';
 
 function RootRouter() {
   const guest = useRoutes(guestRoutes);
   const authenticated = useRoutes(authenticatedRoutes);
   const token = useSelector((state: RootState) => state?.common?.token);
+  const isOnline = useOnlineStatus();
   const isAuthenticated = !!token;
   return (
     <>
+      {isOnline ? null : 'user is offline'}
       <DocumentTitle isAuthenticated={isAuthenticated} />
       <AppLayout isAuthenticated={isAuthenticated}>
         {token ? authenticated : guest}
